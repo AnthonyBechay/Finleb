@@ -1,0 +1,237 @@
+html{
+    overflow-y: scroll;
+}
+
+/*to keep this page from containing horizontal scroll*/
+
+body {
+  overflow-x: hidden;
+  margin-left: 10vh;
+}
+.hidden-thing {
+  position: absolute;
+  left: 100%;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.minipic {
+  max-width:  18rem;
+  max-height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+} 
+
+    .card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.19),0 0.3rem 0.3rem rgba(0,0,0,.23);
+    }
+
+    
+
+
+    /* css classes for card (from internet) */
+
+    .hovereffect {
+      width: 100%;
+      height: 100%;
+      float: left;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+      cursor: default;
+      background: #68be74;
+    }
+    
+    .hovereffect .overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      padding: 50px 20px;
+    }
+    
+    .hovereffect img {
+      display: block;
+      position: relative;
+      max-width: none;
+      width: calc(100% + 20px);
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
+      -webkit-transform: translate3d(-10px,0,0);
+      transform: translate3d(-10px,0,0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    
+    .hovereffect:hover img {
+      opacity: 0.4;
+      filter: alpha(opacity=40);
+      -webkit-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+    }
+    
+    .hovereffect h2 {
+      text-transform: uppercase;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      font-size: 17px;
+      overflow: hidden;
+      padding: 0.5em 0;
+      background-color: transparent;
+    }
+    
+    .hovereffect h2:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      content: '';
+      -webkit-transition: -webkit-transform 0.35s;
+      transition: transform 0.35s;
+      -webkit-transform: translate3d(-100%,0,0);
+      transform: translate3d(-100%,0,0);
+    }
+    
+    .hovereffect:hover h2:after {
+      -webkit-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+    }
+    
+    .hovereffect a, .hovereffect p {
+      color: #FFF;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
+      -webkit-transform: translate3d(100%,0,0);
+      transform: translate3d(100%,0,0);
+    }
+    
+    .hovereffect:hover a, .hovereffect:hover p {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      -webkit-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+    }
+
+    /* end */
+
+
+    /* ------------------------------------ For navbar custom made -----------------------------------------------*/
+    .center-pills {
+      display: flex;
+      justify-content: center;
+  }
+  /*hayde kermel color hiye w makbouse*/
+  .nav-pills > li > a.active {
+      background-color: #2f65da!important;
+  }
+  
+  a:hover,a:focus{
+      outline: none;
+      text-decoration: none;
+  }
+  .my-tab .nav-pills{
+      border-bottom: none;
+  
+  }
+  .my-tab .nav-pills li{
+      margin-right: 15px;
+      /*couleur du li tout le temp (utilise ca pour mettre en relief) */
+      background-color: #D0D0D0;
+    
+  
+  }
+  .my-tab .nav-pills li a{
+      padding: 20px 15px;
+      font-size: 17px;
+      font-weight: 600;
+      color: #25283d;
+      border-radius: 0;
+      text-transform: uppercase;
+      margin-right: 0;
+      border: none;
+      position: relative;
+      transition: all 0.5s ease 0s;
+  }
+  .my-tab .nav-pills li a:hover{
+      /*if clicked and hover again color*/
+      background: #4CAF50;
+      
+  
+  }
+  
+  .my-tab .nav-pills li a:before{
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: rgba(0,0,0, 0.2);
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      transform: scale(0);
+      transition: all 700ms ease 0s;
+  }
+  .my-tab .nav-pills li a:after{
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #4cc985;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      transform: scale(0);
+      transition: all 700ms ease 0s;
+  }
+  .my-tab .nav-pills li.active a,
+  .my-tab .nav-pills li.active a:focus,
+  .my-tab .nav-pills li.active a:hover{
+      border: none;
+      color: #4cc985;
+      
+  }
+  .my-tab .nav-pills li a:hover:before,
+  .my-tab .nav-pills li.active a:before,
+  .my-tab .nav-pills li a:hover:after,
+  .my-tab .nav-pills li.active a:after{
+      transform: scale(1);
+      color: #4cc985;
+  
+  }
+  /* .my-tab .my-tab-content{
+      padding: 20px;
+      background: #fff;
+      font-size: 14px;
+      width:90%;
+      color: #a09d9d;
+      line-height: 26px;
+  }
+  .my-tab .my-tab-content h3{
+      font-size: 24px;
+      margin-top: 0;
+  } */
+  
+  @media only screen and (max-width: 479px){
+      .my-tab .nav-pills li{ width: 100%; }
+      .my-tab .nav-pills li a{ text-align: center; }
+  }
+  
+
+    
+    /*end */
+
+
+    /*search  */
+
+
+    /*end */
